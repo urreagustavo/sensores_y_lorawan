@@ -1,0 +1,14 @@
+function decodeUplink(input) {
+  var temp = input.bytes[0];      // Temperature
+  var hum_rel = input.bytes[1];   // Humidity
+  var smk = input.bytes[2];      // Smoke
+  return {
+    data: {
+      temp: temp,
+      hum_rel: hum_rel,
+      smk: smk,
+    },
+    warnings: [],
+    errors: []
+  };
+}
